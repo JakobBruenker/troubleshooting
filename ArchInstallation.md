@@ -11,5 +11,8 @@ Add
 ```
 [General]
 EnableNetworkConfiguration=true
+
+[Network]
+EnableIPv6=true
 ```
 to /etc/iwd/main.conf.
