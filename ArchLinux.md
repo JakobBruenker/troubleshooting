@@ -14,5 +14,13 @@ EnableNetworkConfiguration=true
 
 [Network]
 EnableIPv6=true
+ResolvingNameService=systemd
 ```
-to /etc/iwd/main.conf.
+to `/etc/iwd/main.conf`,
+add
+```
+[Resolve]
+DNS=1.1.1.1 2606:4700:4700::1111
+```
+to `/etc/systemd/resolved.conf.d/dns_servers.conf`
+and run `systemctl enable systemd-resolved`, `systemctl start systemd-resolved`
